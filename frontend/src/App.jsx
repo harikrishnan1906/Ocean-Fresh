@@ -41,7 +41,7 @@ import OrderHistory from "./pages/branch/manageOrder/onlineOrders/OrderHistory";
 import OnlineOrders from "./pages/branch/manageOrder/OnlineOrders";
 import ScanQR from "./pages/common/ScanQR";
 import CustomerReports from "./pages/customer/CustomerReports";
-import Payment from "./pages/customer/payment";
+import Payment from "./pages/customer/Payment";
 import PaymentSuccess from "./pages/customer/PaymentSuccess";
 import ShopOrders from "./pages/branch/manageOrder/ShopOrders";
 import ShopOrdersHistory from "./pages/branch/manageOrder/ShopOrdersHistory";

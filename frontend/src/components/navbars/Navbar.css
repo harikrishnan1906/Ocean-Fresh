@@ -1,0 +1,69 @@
+.title{
+    color: var(--ocean-500);
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+.title:hover{
+    color: var(--ocean-500);
+}
+.caption{
+    font-size: 0.7rem ;
+    color: var(--gray-600);
+    font-weight: 700;
+}
+
+.btn-container{
+    display: flex !important;
+   
+    gap: 10px;
+}
+.cus-login-btn{
+    background-color: var(--gray-50);
+    border: none;
+    color: var(--seafoam-500);
+    font-size: 1.2rem;
+}
+
+.cus-login-btn:hover{
+    background-color: var(--gray-200);
+    color: var(--seafoam-500);
+
+}
+.cus-reg-btn{
+    background: var(--gradient-primary);
+    border: none;
+      font-size: 1.1rem;
+      font-family: poppins;
+}
+
+.cus-reg-btn:hover{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, var(--seafoam-300) 0px 4px 6px -2px;
+}
+.cus-nav-links-container{
+    font-size: 1.1rem;
+    gap: 10px;
+}
+.nav-link:hover{
+    color: var(--ocean-600);
+}
+
+
+/* on mobile (collapsed), let nav items stack or align left */
+@media (max-width: 991.98px) {
+  .cus-nav-links-container {
+    justify-content: flex-start !important;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .nav-link {
+    padding: 0.5rem 1rem;
+  }
+
+  .btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+}

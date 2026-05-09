@@ -1,0 +1,20 @@
+.emp-profile-image{
+    width: 100px;
+    height: 90px;
+    border-radius: 10px;
+   
+}
+
+.emp-qr-code{
+    width: 100px;
+}
+td, th {
+  vertical-align: middle !important;
+  color: var(--ocean-900) !important;
+}
+
+.custom-emp-table{
+    border: 2px solid var(--ocean-400);
+    border-radius: 50px !important;
+    
+}

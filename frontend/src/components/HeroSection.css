@@ -1,0 +1,160 @@
+.hero-section{
+background: linear-gradient(180deg,#0ea5e9,#0284c7,#0369a1);
+padding:120px 0;
+position:relative;
+overflow:hidden;
+}
+
+/* bubbles */
+
+.bubble{
+position:absolute;
+border-radius:50%;
+background:rgba(255,255,255,0.15);
+animation:float 6s infinite ease-in-out;
+}
+
+.bubble1{
+width:80px;
+height:80px;
+top:60px;
+left:80px;
+}
+
+.bubble2{
+width:60px;
+height:60px;
+top:120px;
+right:120px;
+}
+
+.bubble3{
+width:70px;
+height:70px;
+bottom:100px;
+left:30%;
+}
+
+@keyframes float{
+0%{transform:translateY(0)}
+50%{transform:translateY(-20px)}
+100%{transform:translateY(0)}
+}
+
+/* badge */
+
+.delivery-badge{
+display:inline-flex;
+align-items:center;
+gap:8px;
+background:rgba(255,255,255,0.1);
+padding:8px 16px;
+border-radius:50px;
+margin-bottom:20px;
+font-size:14px;
+}
+
+.pulse-dot{
+width:8px;
+height:8px;
+background:#14b8a6;
+border-radius:50%;
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+0%,100%{opacity:1}
+50%{opacity:0.5}
+}
+
+/* text */
+
+.hero-title{
+font-size:52px;
+font-weight:700;
+line-height:1.2;
+margin-bottom:20px;
+}
+
+.highlight{
+color:#5eead4;
+}
+
+.hero-desc{
+font-size:18px;
+color:#dbeafe;
+margin-bottom:30px;
+max-width:500px;
+}
+
+/* location box */
+
+.location-box{
+background:rgba(255,255,255,0.1);
+padding:15px;
+border-radius:15px;
+margin-bottom:30px;
+max-width:420px;
+}
+
+.district-select{
+border-radius:10px;
+padding:10px;
+}
+
+.find-btn{
+background:#14b8a6;
+border:none;
+}
+
+/* buttons */
+
+.hero-buttons{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+}
+
+.branch-btn{
+background:white;
+color:#0284c7;
+font-weight:600;
+border:none;
+padding:12px 24px;
+}
+
+.browse-btn{
+padding:12px 24px;
+}
+
+/* product cards */
+
+.hero-products{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+max-width:450px;
+margin:auto;
+}
+
+.product-cards{
+background:white;
+border-radius:16px;
+padding:20px;
+color:#333;
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
+
+.product-cards.offset{
+margin-top:40px;
+}
+
+.product-card span{
+color:#0ea5e9;
+font-weight:700;
+}
+
+.emoji{
+font-size:36px;
+margin-bottom:10px;
+}

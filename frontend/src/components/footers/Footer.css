@@ -1,0 +1,92 @@
+.footer-section{
+background:#111827;
+color:white;
+padding:70px 0 30px 0;
+}
+
+/* logo */
+
+.footer-logo{
+display:flex;
+align-items:center;
+gap:12px;
+margin-bottom:15px;
+}
+
+.logo-icon{
+width:45px;
+height:45px;
+background:linear-gradient(135deg,#0ea5e9,#14b8a6);
+border-radius:12px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:22px;
+box-shadow:0 4px 12px rgba(14,165,233,0.4);
+}
+
+.logo-text{
+font-size:22px;
+font-weight:700;
+letter-spacing:0.5px;
+}
+
+/* description */
+
+.footer-desc{
+color:#9ca3af;
+font-size:14px;
+line-height:1.7;
+max-width:320px;
+}
+
+/* titles */
+
+.footer-title{
+font-size:17px;
+font-weight:600;
+margin-bottom:18px;
+color:white;
+}
+
+/* links */
+
+.footer-links{
+list-style:none;
+padding:0;
+margin:0;
+}
+
+.footer-links li{
+color:#9ca3af;
+font-size:14px;
+margin-bottom:12px;
+cursor:pointer;
+transition:all 0.25s ease;
+}
+
+.footer-links li:hover{
+color:#14b8a6;
+transform:translateX(5px);
+}
+
+/* divider */
+
+.footer-divider{
+height:1px;
+background:#374151;
+margin:40px 0 20px 0;
+}
+
+/* bottom */
+
+.footer-bottom{
+text-align:center;
+font-size:13px;
+color:#9ca3af;
+}
+
+.footer-bottom span{
+color:#14b8a6;
+font-weight:500;
+}

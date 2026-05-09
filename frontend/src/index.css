@@ -1,0 +1,122 @@
+ :root{
+
+/* ===============================
+   OCEAN COLORS (Primary Theme)
+================================ */
+
+--ocean-50: #f0f9ff;
+--ocean-100: #e0f2fe;
+--ocean-200: #bae6fd;
+--ocean-300: #7dd3fc;
+--ocean-400: #38bdf8;
+--ocean-500: #0ea5e9;
+--ocean-600: #0284c7;
+--ocean-700: #0369a1;
+--ocean-800: #075985;
+--ocean-900: #0c4a6e;
+--ocean-950: #082f49;
+
+
+/* ===============================
+   SEAFOAM COLORS (Secondary)
+================================ */
+
+--seafoam-50: #f0fdfa;
+--seafoam-100: #ccfbf1;
+--seafoam-200: #99f6e4;
+--seafoam-300: #5eead4;
+--seafoam-400: #2dd4bf;
+--seafoam-500: #14b8a6;
+
+
+/* ===============================
+   CORAL COLORS (Accent)
+================================ */
+
+--coral-400: #fb7185;
+--coral-500: #f43f5e;
+
+
+/* ===============================
+   SAND COLORS (Soft Background)
+================================ */
+
+--sand-50: #fefce8;
+--sand-100: #fef9c3;
+--sand-200: #fef08a;
+
+
+/* ===============================
+   GRAY COLORS (Neutral)
+================================ */
+
+--gray-50: #f9fafb;
+--gray-100: #f3f4f6;
+--gray-200: #e5e7eb;
+--gray-300: #d1d5db;
+--gray-400: #9ca3af;
+--gray-500: #6b7280;
+--gray-600: #4b5563;
+--gray-700: #374151;
+--gray-800: #1f2937;
+--gray-900: #111827;
+
+
+/* ===============================
+   SPECIAL COLORS
+================================ */
+
+--white: #ffffff;
+--black: #000000;
+
+--success: #14b8a6;
+--warning: #fbbf24;
+--danger: #f43f5e;
+
+
+/* ===============================
+   GRADIENT COLORS
+================================ */
+
+--gradient-primary: linear-gradient(135deg, #0ea5e9, #14b8a6);
+--gradient-ocean: linear-gradient(180deg, #0ea5e9, #0284c7, #0369a1);
+
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+     font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+
+
+.glass-effect{
+     background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  padding: 2rem;
+  color: white;
+  position: relative;
+  overflow: hidden; 
+}
+
+.glass-effect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+}
+
+@media (max-width: 991.98px){
+   .glass-effect{
+      min-width: 250px !important;
+   }
+}

@@ -1,9 +1,8 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5069/api",
+  baseURL: "https://oceanfresh-backend.onrender.com",
   withCredentials: true,
 });
 
 export default API;
-    

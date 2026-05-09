@@ -34,7 +34,7 @@ import CustomerFeedback from "./pages/customer/CustomerFeedback";
 import CustomerProduct from "./pages/customer/CustomerProducts";
 import CustomerViewProduct from "./pages/customer/CustomerViewProduct";
 import CustomerMyOrders from "./pages/customer/CustomerMyOrders";
-import CustomerQRCodeFeedback from "./pages/customer/customerQRCodeFeedback";
+import CustomerQRCodeFeedback from "./pages/customer/CustomerQRCodeFeedback";
 import NewOrders from "./pages/branch/manageOrder/onlineOrders/NewOrders";
 import ActiveOrders from "./pages/branch/manageOrder/onlineOrders/ActiveOrders";
 import OrderHistory from "./pages/branch/manageOrder/onlineOrders/OrderHistory";
@@ -63,8 +63,8 @@ function App() {
           {/* Authentication */}
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/forgotPassword" element={<ForgotPassword/>} />
-          <Route  path="/change-password" element={<ChangePassword/>} />
+          <Route path="/forgotPassword" element={<ForgotPassword />} />
+          <Route path="/change-password" element={<ChangePassword />} />
 
           {/* Admin layout */}
           <Route path="/adminDashboard" element={<AdminDashboardLayout />}>
@@ -91,8 +91,8 @@ function App() {
             <Route path="editUsers" element={<EditUsers />} />
 
             {/* orders */}
-            <Route  path="adminOnlineOrders" element={<AdminOnlineOrders/>} />
-            <Route path="adminShopOrders" element={<AdminShopOrders/>} />
+            <Route path="adminOnlineOrders" element={<AdminOnlineOrders />} />
+            <Route path="adminShopOrders" element={<AdminShopOrders />} />
             {/* Feedback */}
             <Route path="feedback" element={<FeedbackReport />} />
             <Route path="reports" element={<Report />} />

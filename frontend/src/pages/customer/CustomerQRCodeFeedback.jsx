@@ -15,6 +15,7 @@ import {
 import { submitQRFeedbackAPI } from "../../services/feedbackService";
 import GeneralFooter from "../../components/footers/GeneralFooter";
 import GeneralNavbar from "../../components/navbars/GeneralNavbar";
+import BACKEND_URL from "../../services/uploadsBaseUrl";
 
 function StarRating({ rating, setRating }) {
   return (
@@ -144,7 +145,7 @@ function CustomerQRCodeFeedback() {
                             style={{ height: "200px", objectFit: "cover" }}
                             src={
                               branchDetail.branchImage
-                                ? `http://localhost:5069/${branchDetail.branchImage}`
+                                ? `BACKEND_URL/${branchDetail.branchImage}`
                                 : "/defaultImage.png"
                             }
                           />
@@ -180,7 +181,7 @@ function CustomerQRCodeFeedback() {
                                 <img
                                   src={
                                     employeeDetail.employeeImage
-                                      ? `http://localhost:5069/${employeeDetail.employeeImage}`
+                                      ? `${BACKEND_URL}/${employeeDetail.employeeImage}`
                                       : "/defaultImage.png"
                                   }
                                   alt="employee"

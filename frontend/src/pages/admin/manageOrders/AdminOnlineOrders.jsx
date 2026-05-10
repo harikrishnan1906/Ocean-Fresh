@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Container, Table, Spinner, Badge } from "react-bootstrap";
 import { getOnlineOrdersAPI } from "../../../services/adminService";
+import BACKEND_URL from "../../../services/uploadsBaseUrl";
 
 function AdminOnlineOrders() {
   const [orders, setOrders] = useState([]);
@@ -60,7 +61,7 @@ function AdminOnlineOrders() {
                   <img
                     src={
                       ord.productId?.productImage
-                        ? `http://localhost:5069/${ord.productId.productImage}`
+                        ? `${BACKEND_URL}/${ord.productId.productImage}`
                         : "/defaultImage.png"
                     }
                     style={{

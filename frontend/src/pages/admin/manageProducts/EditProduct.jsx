@@ -14,6 +14,7 @@ import {
   Badge,
   Table,
 } from "react-bootstrap";
+import BACKEND_URL from "../../../services/uploadsBaseUrl";
 
 function EditProduct() {
 
@@ -89,7 +90,7 @@ function EditProduct() {
                <div className="text-center mb-4">
                  <img
                    id="previewImg"
-                   src={`http://localhost:5069/${product.productImage}`}
+                   src={`${BACKEND_URL}/${product.productImage}`}
                    alt={product.productName}
                    style={{
                      width: "120px",

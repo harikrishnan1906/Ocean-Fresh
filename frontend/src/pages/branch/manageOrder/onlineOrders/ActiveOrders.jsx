@@ -12,6 +12,7 @@ import {
   getBranchOrdersAPI,
   updateOrderStatusAPI,
 } from "../../../../services/branchService";
+import BACKEND_URL from "../../../../services/uploadsBaseUrl";
 
 function ActiveOrders() {
   const [orders, setOrders] = useState([]);
@@ -86,7 +87,7 @@ function ActiveOrders() {
                     style={{ height: "200px", borderRadius: "10px" }}
                     src={
                       ord.productId?.productImage
-                        ? `http://localhost:5069/${ord.productId.productImage}`
+                        ? `${BACKEND_URL}/${ord.productId.productImage}`
                         : "/defaultImage.png"
                     }
                     className="product-img"

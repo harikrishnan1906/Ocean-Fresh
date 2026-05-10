@@ -18,6 +18,7 @@ import {
   Badge,
   Table,
 } from "react-bootstrap";
+import BACKEND_URL from "../../../services/uploadsBaseUrl";
 
 function Inventary() {
   const [products, setProducts] = useState([]);
@@ -150,7 +151,7 @@ function Inventary() {
                         <img
                           src={
                             item.productImage
-                              ? `http://localhost:5069/${item.productImage}`
+                              ? `${BACKEND_URL}/${item.productImage}`
                               : "/src/assets/images/defaultImage.png"
                           }
                           alt={item.productName}

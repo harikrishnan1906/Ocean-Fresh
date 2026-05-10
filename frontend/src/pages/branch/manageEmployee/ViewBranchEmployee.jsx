@@ -17,6 +17,7 @@ import {
   viewEmployees,
 } from "../../../services/employeeService";
 import "./ViewBranchEmployee.css";
+import BACKEND_URL from "../../../services/uploadsBaseUrl";
 
 function ViewBranchEmployee() {
   // delete product modal
@@ -117,7 +118,7 @@ function ViewBranchEmployee() {
                         className="emp-profile-image"
                         src={
                           emp.employeeImage
-                            ? `http://localhost:5069/${emp.employeeImage}`
+                            ? `${BACKEND_URL}/${emp.employeeImage}`
                             : "/src/assets/images/defaultImage.png"
                         }
                         alt={emp.employeeName}

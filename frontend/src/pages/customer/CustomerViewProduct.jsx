@@ -16,6 +16,7 @@ import {
   FloatingLabel,
   Button,
 } from "react-bootstrap";
+import BACKEND_URL from "../../services/uploadsBaseUrl";
 
 function CustomerViewProduct() {
   const [loading, setLoading] = useState(true);
@@ -138,7 +139,7 @@ function CustomerViewProduct() {
                       variant="top"
                       src={
                         product.productImage
-                          ? `http://localhost:5069/${product.productImage}`
+                          ? `${BACKEND_URL}/${product.productImage}`
                           : "/src/assets/images/defaultImage.png"
                       }
                       className="img-fluid"

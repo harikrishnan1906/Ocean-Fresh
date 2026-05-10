@@ -15,6 +15,7 @@ import {
   Modal,
   Button,
 } from "react-bootstrap";
+import BACKEND_URL from "../../../services/uploadsBaseUrl";
 
 function EditBranchEmployee() {
   const navigate = useNavigate();
@@ -92,7 +93,7 @@ function EditBranchEmployee() {
              <h6 className="mb-3">Profile</h6>
 
              <img
-               src={`http://localhost:5069/${employee.employeeImage}`}
+               src={`${BACKEND_URL}/${employee.employeeImage}`}
                alt={employee.employeeName}
                style={{
                  width: "120px",

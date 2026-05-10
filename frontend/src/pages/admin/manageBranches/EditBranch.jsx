@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { Form, Row, Col, FloatingLabel, Button } from "react-bootstrap";
 import API from "../../../services/api";
 import { getAllBranchesAPI, updateBranchAPI } from "../../../services/adminService";
+import BACKEND_URL from "../../../services/uploadsBaseUrl";
 
 function EditBranch() {
   const { id } = useParams();
@@ -68,7 +69,7 @@ function EditBranch() {
           {/* IMAGE PREVIEW */}
           <div className="text-center mb-4">
             <img
-              src={`http://localhost:5069/${preview}`}
+              src={`${BACKEND_URL}/${preview}`}
               alt="branch"
               style={{
                 width: "120px",

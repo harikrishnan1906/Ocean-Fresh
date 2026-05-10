@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col, Card, Badge, Form } from "react-bootstrap";
 import { getAllEmployeesAPI } from "../../../services/adminService";
+import BACKEND_URL from "../../../services/uploadsBaseUrl";
 
 function ViewEmployee() {
   const [employees, setEmployees] = useState([]);
@@ -51,7 +52,7 @@ function ViewEmployee() {
               {/* IMAGE */}
               <div className="text-center mt-3">
                 <img
-                  src={`http://localhost:5069/${emp.employeeImage}`}
+                  src={`${BACKEND_URL}/${emp.employeeImage}`}
                   alt={emp.employeeName}
                   style={{
                     width: "80px",

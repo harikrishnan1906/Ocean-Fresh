@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
 import { restoreProductAPI } from "../../../services/adminService";
+import BACKEND_URL from "../../../services/uploadsBaseUrl";
 
 function DeletedProducts() {
   // restore product modal
@@ -68,7 +69,7 @@ function DeletedProducts() {
              <Card className="h-100 shadow-sm border-0 rounded-4">
                {/* IMAGE */}
                <Card.Img
-                 src={`http://localhost:5069/${pro.productImage}`}
+                 src={`${BACKEND_URL}/${pro.productImage}`}
                  style={{
                    height: "180px",
                    objectFit: "cover",

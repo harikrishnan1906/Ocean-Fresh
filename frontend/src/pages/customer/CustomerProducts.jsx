@@ -13,6 +13,7 @@ import {
 } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import API from "../../services/api";
+import BACKEND_URL from "../../services/uploadsBaseUrl";
 
 function CustomerProducts() {
   const cities = [
@@ -144,7 +145,7 @@ useEffect(() => {
                     variant="top"
                     src={
                       branch.branchImage
-                        ? `http://localhost:5069/${branch.branchImage}`
+                        ? `${BACKEND_URL}/${branch.branchImage}`
                         : "/src/assets/images/defaultImage.png"
                     }
                     style={{ height: "180px", objectFit: "cover" }}

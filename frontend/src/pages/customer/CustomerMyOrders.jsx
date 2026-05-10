@@ -16,6 +16,7 @@ import {
   Button,
   Modal,
 } from "react-bootstrap";
+import BACKEND_URL from "../../services/uploadsBaseUrl";
 
 function CustomerMyOrders() {
   const [myOrders, setMyOrders] = useState([]);
@@ -82,7 +83,7 @@ function CustomerMyOrders() {
                     variant="top"
                     src={
                       ord.productId?.productImage
-                        ? `http://localhost:5069/${ord.productId.productImage}`
+                        ? `${BACKEND_URL}/${ord.productId.productImage}`
                         : "/defaultImage.png"
                     }
                     style={{

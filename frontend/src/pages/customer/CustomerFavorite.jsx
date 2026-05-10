@@ -14,6 +14,7 @@ import {
   FloatingLabel,
   Button,
 } from "react-bootstrap";
+import BACKEND_URL from "../../services/uploadsBaseUrl";
 
 function CustomerFavorite() {
   const [loading, setLoading] = useState(true);
@@ -83,7 +84,7 @@ function CustomerFavorite() {
                     <Card.Img
                       src={
                         fav.productImage
-                          ? `http://localhost:5069/${fav.productImage}`
+                          ? `${BACKEND_URL}/${fav.productImage}`
                           : "/src/assets/images/defaultImage.png"
                       }
                       style={{ height: "100%", objectFit: "cover" }}

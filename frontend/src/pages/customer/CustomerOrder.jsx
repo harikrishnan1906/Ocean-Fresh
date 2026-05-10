@@ -19,6 +19,7 @@ import {
 } from "react-bootstrap";
 import "./CustomerOrder.css";
 import LocationPicker from "../common/LocationPicker";
+import BACKEND_URL from "../../services/uploadsBaseUrl";
 
 function CustomerOrder() {
   const navigate = useNavigate();
@@ -168,7 +169,7 @@ function CustomerOrder() {
                   variant="top"
                   src={
                     orderProdut.productImage
-                      ? `http://localhost:5069/${orderProdut.productImage}`
+                      ? `${BACKEND_URL}/${orderProdut.productImage}`
                       : "/src/assets/images/defaultImage.png"
                   }
                   style={{ height: "220px", objectFit: "cover" }}

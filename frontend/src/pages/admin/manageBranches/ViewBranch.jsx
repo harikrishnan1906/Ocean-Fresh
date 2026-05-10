@@ -8,7 +8,7 @@ import {
 } from "../../../services/adminService";
 
 function ViewBranch() {
-  const [branches, setBranches] = useState();
+  const [branches, setBranches] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {

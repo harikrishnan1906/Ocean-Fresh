@@ -21,7 +21,7 @@ function Feedback() {
 
   // 🔍 Filter
   const filteredFeedback = feedbacks.filter((fb) =>
-    fb.comment.toLowerCase().includes(search.toLowerCase()),
+    (fb.comment || "").toLowerCase().includes(search.toLowerCase()),
   );
 
   // ⭐ Rating color (optional UX improvement)

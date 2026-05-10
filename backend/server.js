@@ -13,7 +13,7 @@ app.use(
     origin: [
       "http://localhost:5173",
       "http://localhost:5174",
-      "https://ocean-fresh-6k37-git-main-hari-krishnans-projects-56f0c02d.vercel.app/",
+      "https://ocean-fresh-6k37-git-main-hari-krishnans-projects-56f0c02d.vercel.app",
     ],
     credentials: true,
   }),

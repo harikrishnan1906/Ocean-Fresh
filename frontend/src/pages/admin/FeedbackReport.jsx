@@ -10,6 +10,10 @@ function Feedback() {
     const fetchFeedback = async () => {
       try {
         const res = await getAllFeedbackAPI();
+       console.log("API Response:", res.data);
+       console.log("Type:", typeof res.data);
+       console.log("Is Array:", Array.isArray(res.data));
+        console.log(res.data);
         setFeedbacks(res.data);
       } catch (err) {
         console.log(err);

@@ -32,12 +32,12 @@ const adminLogin = async (req, res) => {
     const token = generateToken(admin._id);
 
     //set cookie
-    res.cookie("token", token, {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === "protuction",
-      sameSite: "strict",
-      maxAge: 30 * 24 * 60 * 60 * 1000,
-    });
+   res.cookie("token", token, {
+     httpOnly: true,
+     secure: true,
+     sameSite: "None",
+     maxAge: 30 * 24 * 60 * 60 * 1000,
+   });
 
     res.status(200).json({
       message: "Admin login successful",

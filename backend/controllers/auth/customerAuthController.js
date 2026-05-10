@@ -68,9 +68,9 @@ const loginCustomer = async (req, res) => {
     //set cookie
     res.cookie("token", token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "protuction",
-      sameSite: "strict",
-      maxAge: 10 * 24 * 60 * 60 * 1000,
+      secure: true,
+      sameSite: "None",
+      maxAge: 30 * 24 * 60 * 60 * 1000,
     });
 
     res.status(200).json({

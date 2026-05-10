@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Container, Row, Col, Card, Badge, Form } from "react-bootstrap";
 import { getAllEmployeesAPI } from "../../../services/adminService";
 import BACKEND_URL from "../../../services/uploadsBaseUrl";
+import defaulImage from "../../../assets/images/defaulImage.png";
 
 function ViewEmployee() {
   const [employees, setEmployees] = useState([]);
@@ -52,7 +53,11 @@ function ViewEmployee() {
               {/* IMAGE */}
               <div className="text-center mt-3">
                 <img
-                  src={`${BACKEND_URL}/${emp.employeeImage}`}
+                  src={
+                    emp.employeeImage
+                      ? `${BACKEND_URL}/${emp.employeeImage}`
+                      : defaulImage
+                  }
                   alt={emp.employeeName}
                   style={{
                     width: "80px",

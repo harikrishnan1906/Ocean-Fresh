@@ -20,6 +20,7 @@ import {
 import "./CustomerOrder.css";
 import LocationPicker from "../common/LocationPicker";
 import BACKEND_URL from "../../services/uploadsBaseUrl";
+import defaulImage from "../../assets/images/defaulImage.png";
 
 function CustomerOrder() {
   const navigate = useNavigate();
@@ -170,7 +171,7 @@ function CustomerOrder() {
                   src={
                     orderProdut.productImage
                       ? `${BACKEND_URL}/${orderProdut.productImage}`
-                      : "/src/assets/images/defaultImage.png"
+                      : defaulImage
                   }
                   style={{ height: "220px", objectFit: "cover" }}
                 />
@@ -352,10 +353,14 @@ function CustomerOrder() {
       </Container>
 
       {/* ordered confirmed */}
-      <Modal show={showModal} onHide={() => {
-        setShowModal(false);
-        navigate(`/customerDashboard/customerMyOrders`);
-      }} centered>
+      <Modal
+        show={showModal}
+        onHide={() => {
+          setShowModal(false);
+          navigate(`/customerDashboard/customerMyOrders`);
+        }}
+        centered
+      >
         <Modal.Header closeButton>
           <Modal.Title>Your Order Placed Successfully</Modal.Title>
         </Modal.Header>
@@ -380,16 +385,15 @@ function CustomerOrder() {
         </Modal.Body>
 
         <Modal.Footer>
-          
-
-          <Button className="w-100"
+          <Button
+            className="w-100"
             variant="primary"
             onClick={() => {
               setShowModal(false);
               navigate(`/customerDashboard/customerMyOrders`);
-              }}
+            }}
           >
-           Back
+            Back
           </Button>
         </Modal.Footer>
       </Modal>

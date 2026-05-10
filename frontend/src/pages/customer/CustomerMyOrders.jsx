@@ -17,6 +17,7 @@ import {
   Modal,
 } from "react-bootstrap";
 import BACKEND_URL from "../../services/uploadsBaseUrl";
+import defaulImage from "../../assets/images/defaulImage.png";
 
 function CustomerMyOrders() {
   const [myOrders, setMyOrders] = useState([]);
@@ -84,7 +85,7 @@ function CustomerMyOrders() {
                     src={
                       ord.productId?.productImage
                         ? `${BACKEND_URL}/${ord.productId.productImage}`
-                        : "/defaultImage.png"
+                        : defaulImage
                     }
                     style={{
                       height: "180px",

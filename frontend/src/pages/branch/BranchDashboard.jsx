@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getBranchDetailsAPI } from "../../services/branchService";
 import { Container, Row, Col, Card, Spinner, Table } from "react-bootstrap";
 import BACKEND_URL from "../../services/uploadsBaseUrl";
+import defaulImage from "../../assets/images/defaulImage.png";
 
 function BranchDashboard() {
   const [branch, setBranch] = useState(null);
@@ -53,7 +54,7 @@ function BranchDashboard() {
                   src={
                     branch.branchImage
                       ? `${BACKEND_URL}/${branch.branchImage}`
-                      : "/src/assets/images/defaultImage.png"
+                      : defaulImage
                   }
                   alt="branch"
                   className="w-100"

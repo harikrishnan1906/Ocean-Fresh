@@ -10,6 +10,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { restoreProductAPI } from "../../../services/adminService";
 import BACKEND_URL from "../../../services/uploadsBaseUrl";
+import defaulImage from "../../../assets/images/defaulImage.png";
 
 function DeletedProducts() {
   // restore product modal
@@ -69,7 +70,11 @@ function DeletedProducts() {
              <Card className="h-100 shadow-sm border-0 rounded-4">
                {/* IMAGE */}
                <Card.Img
-                 src={`${BACKEND_URL}/${pro.productImage}`}
+                 src={
+                   pro.productImage
+                     ? `${BACKEND_URL}/${pro.productImage}`
+                     : defaulImage
+                 }
                  style={{
                    height: "180px",
                    objectFit: "cover",

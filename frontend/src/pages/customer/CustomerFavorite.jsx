@@ -15,6 +15,7 @@ import {
   Button,
 } from "react-bootstrap";
 import BACKEND_URL from "../../services/uploadsBaseUrl";
+import defaulImage from "../../assets/images/defaulImage.png";
 
 function CustomerFavorite() {
   const [loading, setLoading] = useState(true);
@@ -85,7 +86,7 @@ function CustomerFavorite() {
                       src={
                         fav.productImage
                           ? `${BACKEND_URL}/${fav.productImage}`
-                          : "/src/assets/images/defaultImage.png"
+                          : defaulImage
                       }
                       style={{ height: "100%", objectFit: "cover" }}
                     />

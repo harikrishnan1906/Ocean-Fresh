@@ -14,6 +14,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import API from "../../services/api";
 import BACKEND_URL from "../../services/uploadsBaseUrl";
+import defaulImage from "../../assets/images/defaulImage.png";
 
 function CustomerProducts() {
   const cities = [
@@ -146,7 +147,7 @@ useEffect(() => {
                     src={
                       branch.branchImage
                         ? `${BACKEND_URL}/${branch.branchImage}`
-                        : "/src/assets/images/defaultImage.png"
+                        : defaulImage
                     }
                     style={{ height: "180px", objectFit: "cover" }}
                   />

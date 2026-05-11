@@ -4,7 +4,7 @@ import { Form, Row, Col, FloatingLabel, Button } from "react-bootstrap";
 import API from "../../../services/api";
 import { getAllBranchesAPI, updateBranchAPI } from "../../../services/adminService";
 import BACKEND_URL from "../../../services/uploadsBaseUrl";
-import defaulImage from "../../../assets/images/defaulImage.png";
+import defaultImage from "../../../assets/images/defaultImage.png";
 
 function EditBranch() {
   const { id } = useParams();
@@ -70,7 +70,7 @@ function EditBranch() {
           {/* IMAGE PREVIEW */}
           <div className="text-center mb-4">
             <img
-              src={preview ? `${BACKEND_URL}/${preview}` : defaulImage}
+              src={preview ? `${BACKEND_URL}/${preview}` : defaultImage}
               alt="branch"
               style={{
                 width: "120px",

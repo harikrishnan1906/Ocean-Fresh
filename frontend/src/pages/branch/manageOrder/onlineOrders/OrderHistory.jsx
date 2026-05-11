@@ -13,7 +13,7 @@ import {
   updateOrderStatusAPI,
 } from "../../../../services/branchService";
 import BACKEND_URL from "../../../../services/uploadsBaseUrl";
-import defaulImage from "../../../../assets/images/defaulImage.png";
+import defaultImage from "../../../../assets/images/defaultImage.png";
 
 function OrderHistory() {
   const [orders, setOrders] = useState([]);
@@ -63,7 +63,7 @@ function OrderHistory() {
                      src={
                        ord.productId?.productImage
                          ? `${BACKEND_URL}/${ord.productId.productImage}`
-                         : defaulImage
+                         : defaultImage
                      }
                      style={{
                        height: "180px",

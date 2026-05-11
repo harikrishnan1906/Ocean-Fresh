@@ -15,7 +15,7 @@ import {
   Table,
 } from "react-bootstrap";
 import BACKEND_URL from "../../../services/uploadsBaseUrl";
-import defaulImage from "../../../assets/images/defaulImage.png";
+import defaultImage from "../../../assets/images/defaultImage.png";
 
 function EditProduct() {
 
@@ -94,7 +94,7 @@ function EditProduct() {
                    src={
                      product.productImage
                        ? `${BACKEND_URL}/${product.productImage}`
-                       : defaulImage
+                       : defaultImage
                    }
                    alt={product.productName}
                    style={{

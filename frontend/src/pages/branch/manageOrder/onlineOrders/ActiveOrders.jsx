@@ -13,7 +13,7 @@ import {
   updateOrderStatusAPI,
 } from "../../../../services/branchService";
 import BACKEND_URL from "../../../../services/uploadsBaseUrl";
-import defaulImage from "../../../../assets/images/defaulImage.png";
+import defaultImage from "../../../../assets/images/defaultImage.png";
 
 function ActiveOrders() {
   const [orders, setOrders] = useState([]);
@@ -89,7 +89,7 @@ function ActiveOrders() {
                     src={
                       ord.productId?.productImage
                         ? `${BACKEND_URL}/${ord.productId.productImage}`
-                        : defaulImage
+                        : defaultImage
                     }
                     className="product-img"
                   />

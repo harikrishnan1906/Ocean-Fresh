@@ -20,7 +20,7 @@ import {
 import "./CustomerOrder.css";
 import LocationPicker from "../common/LocationPicker";
 import BACKEND_URL from "../../services/uploadsBaseUrl";
-import defaulImage from "../../assets/images/defaulImage.png";
+import defaultImage from "../../assets/images/defaultImage.png";
 
 function CustomerOrder() {
   const navigate = useNavigate();
@@ -171,7 +171,7 @@ function CustomerOrder() {
                   src={
                     orderProdut.productImage
                       ? `${BACKEND_URL}/${orderProdut.productImage}`
-                      : defaulImage
+                      : defaultImage
                   }
                   style={{ height: "220px", objectFit: "cover" }}
                 />

@@ -17,7 +17,7 @@ import {
   Button,
 } from "react-bootstrap";
 import BACKEND_URL from "../../services/uploadsBaseUrl";
-import defaulImage from "../../assets/images/defaulImage.png";
+import defaultImage from "../../assets/images/defaultImage.png";
 
 function CustomerViewProduct() {
   const [loading, setLoading] = useState(true);
@@ -141,7 +141,7 @@ function CustomerViewProduct() {
                       src={
                         product.productImage
                           ? `${BACKEND_URL}/${product.productImage}`
-                          : defaulImage
+                          : defaultImage
                       }
                       className="img-fluid"
                       style={{ height: "100%", objectFit: "cover" }}

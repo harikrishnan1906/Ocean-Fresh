@@ -16,6 +16,7 @@ import {
 } from "react-bootstrap";
 import LocationPicker from "../../common/LocationPicker";
 import { useState } from "react";
+import defaultImage from "../../../assets/images/defaultImage.png";
 
 function AddBranch() {
   const [location, setLocation] = useState(null);
@@ -90,7 +91,7 @@ function AddBranch() {
               <div className="text-center mb-4">
                 <img
                   id="previewImg"
-                  src="/defaultImage.png"
+                  src={defaultImage}
                   alt="preview"
                   style={{
                     width: "120px",

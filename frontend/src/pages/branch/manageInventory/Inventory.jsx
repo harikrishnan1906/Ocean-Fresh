@@ -19,7 +19,7 @@ import {
   Table,
 } from "react-bootstrap";
 import BACKEND_URL from "../../../services/uploadsBaseUrl";
-import defaulImage from "../../../assets/images/defaulImage.png";
+import defaultImage from "../../../assets/images/defaultImage.png";
 
 function Inventary() {
   const [products, setProducts] = useState([]);
@@ -153,7 +153,7 @@ function Inventary() {
                           src={
                             item.productImage
                               ? `${BACKEND_URL}/${item.productImage}`
-                              : defaulImage
+                              : defaultImage
                           }
                           alt={item.productName}
                           style={{

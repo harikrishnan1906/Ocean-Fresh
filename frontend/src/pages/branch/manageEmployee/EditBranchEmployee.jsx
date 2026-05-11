@@ -16,7 +16,7 @@ import {
   Button,
 } from "react-bootstrap";
 import BACKEND_URL from "../../../services/uploadsBaseUrl";
-import defaulImage from "../../../assets/images/defaulImage.png";
+import defaultImage from "../../../assets/images/defaultImage.png";
 
 function EditBranchEmployee() {
   const navigate = useNavigate();
@@ -97,7 +97,7 @@ function EditBranchEmployee() {
                src={
                  employee.employeeImage
                    ? `${BACKEND_URL}/${employee.employeeImage}`
-                   : defaulImage
+                   : defaultImage
                }
                alt={employee.employeeName}
                style={{

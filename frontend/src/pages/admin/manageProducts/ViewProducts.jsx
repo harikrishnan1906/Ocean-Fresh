@@ -15,7 +15,7 @@ import {
 } from "react-bootstrap";
 import { deleteProductAPI } from "../../../services/adminService";
 import BACKEND_URL from "../../../services/uploadsBaseUrl";
-import defaulImage from "../../../assets/images/defaulImage.png";
+import defaultImage from "../../../assets/images/defaultImage.png";
 
 function ViewProducts() {
   // delete product modal
@@ -83,7 +83,7 @@ function ViewProducts() {
                  src={
                    pro.productImage
                      ? `${BACKEND_URL}/${pro.productImage}`
-                     : defaulImage
+                     : defaultImage
                  }
                  style={{
                    height: "180px",

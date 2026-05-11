@@ -14,7 +14,7 @@ import {
 } from "../../../../services/branchService";
 import "./NewOrders.css";
 import BACKEND_URL from "../../../../services/uploadsBaseUrl";
-import defaulImage from "../../../../assets/images/defaulImage.png";
+import defaultImage from "../../../../assets/images/defaultImage.png";
 
 function NewOrders() {
   const [orders, setOrders] = useState([]);
@@ -91,7 +91,7 @@ function NewOrders() {
                         src={
                           ord.productId?.productImage
                             ? `${BACKEND_URL}/${ord.productId.productImage}`
-                            : defaulImage
+                            : defaultImage
                         }
                         className="product-img"
                       />

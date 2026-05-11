@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Container, Table, Spinner, Badge } from "react-bootstrap";
 import { getOnlineOrdersAPI } from "../../../services/adminService";
 import BACKEND_URL from "../../../services/uploadsBaseUrl";
-import defaulImage from "../../../assets/images/defaulImage.png";
+import defaultImage from "../../../assets/images/defaultImage.png";
 
 function AdminOnlineOrders() {
   const [orders, setOrders] = useState([]);
@@ -63,7 +63,7 @@ function AdminOnlineOrders() {
                     src={
                       ord.productId?.productImage
                         ? `${BACKEND_URL}/${ord.productId.productImage}`
-                        : defaulImage
+                        : defaultImage
                     }
                     style={{
                       width: 40,

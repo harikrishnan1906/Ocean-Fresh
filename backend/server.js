@@ -14,6 +14,7 @@ app.use(
       "http://localhost:5173",
       "http://localhost:5174",
       "https://ocean-fresh-6k37-two.vercel.app",
+      "https://ocean-fresh-j7hp.vercel.app",
     ],
     credentials: true,
   }),

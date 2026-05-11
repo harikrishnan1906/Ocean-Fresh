@@ -8,14 +8,20 @@ const bcrypt = require("bcrypt");
 const cookieParser = require("cookie-parser");
 
 const app = express();
+app.set("trust proxy", 1);
 app.use(
   cors({
-    origin: [
-      "http://localhost:5173",
-      "http://localhost:5174",
-      "https://ocean-fresh-6k37-two.vercel.app",
-      "https://ocean-fresh-j7hp.vercel.app",
-    ],
+    origin: function (origin, callback) {
+      if (
+        !origin ||
+        origin.includes("localhost") ||
+        origin.includes("vercel.app")
+      ) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     credentials: true,
   }),
 );
